@@ -4,13 +4,19 @@
   <title>HackpsuApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <%= csrf_meta_tags %><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<%= yield %>
+	<div class='container'>
+		<%= render 'layouts/header' %>
 
-<footer>Created by the HackPSU Team (c) 2015 | <%= link_to "hackpsu.org","http://hackpsu.org"%> | <%= link_to "email us", "mailto:team@hackpsu.org"%>
+		<%= yield %>
 
+	
+
+		<footer>Created by the HackPSU Team (c) 2015 | <%= link_to "hackpsu.org","http://hackpsu.org"%> | <%= link_to "email us", "mailto:team@hackpsu.org"%>
+	</div>
 </body>
 </html>
